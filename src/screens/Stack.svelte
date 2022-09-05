@@ -7,13 +7,13 @@
   function pushButtonClick() {
     max++;
     let newArray = things;
-    things.push(max);
+    newArray.push(max);
     things = newArray;
   }
 
   function popButtonClick() {
     let newArray = things;
-    things.pop();
+    newArray.pop();
     things = newArray;
   }
 
@@ -25,6 +25,14 @@
 
 <main>
   <h1>Stack</h1>
+  <p>스택은 후입선출(FIFO)의 특성을 가지는 자료구조입니다.</p>
+  <p>입력 연산을 push, 출력 연산을 pop이라고 부릅니다.</p>
+  <p>
+    <a href="https://www.geeksforgeeks.org/stack-data-structure/" target="popup"
+      >참고자료</a
+    >
+  </p>
+
   <button on:click={pushButtonClick}>PUSH</button>
   <button on:click={popButtonClick}>POP</button>
   <button on:click={clearButtonClick}>Clear</button>
