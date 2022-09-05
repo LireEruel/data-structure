@@ -16,12 +16,18 @@
     things.pop();
     things = newArray;
   }
+
+  function clearButtonClick() {
+    things = [0];
+    max = 0;
+  }
 </script>
 
 <main>
   <h1>Stack</h1>
   <button on:click={pushButtonClick}>PUSH</button>
   <button on:click={popButtonClick}>POP</button>
+  <button on:click={clearButtonClick}>Clear</button>
   {#each things as thing, index}
     <StackBlock id={thing} />
   {/each}
@@ -34,5 +40,8 @@
   }
   h1 {
     font-size: 3em;
+  }
+  button {
+    padding: 10px;
   }
 </style>
