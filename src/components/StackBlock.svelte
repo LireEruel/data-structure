@@ -11,6 +11,8 @@
 <style>
   p {
     background-color: gray;
+    text-align: center;
+    padding: 5px 0px;
   }
   span {
     display: inline-block;
