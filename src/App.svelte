@@ -3,10 +3,12 @@
   import Router from "svelte-spa-router";
   import Home from "./screens/Home.svelte";
   import Queue from "./screens/Queue.svelte";
+  import Bubble from "./screens/Bubble.svelte";
   const routes = {
     "/": Home,
     "/stack": Stack,
     "/queue": Queue,
+    "/bubble": Bubble,
   };
 </script>
 
