@@ -70,6 +70,9 @@
     for (i = 0; i < numOfBars - 1; i++) {
       cur_min = i;
       for (j = i + 1; j < numOfBars; j++) {
+        targetBar = j;
+        targetArray = targetArray;
+        await sleep(speedFactor);
         if (targetArray[j] < targetArray[cur_min]) {
           cur_min = j;
         }
@@ -80,6 +83,7 @@
         swap(targetArray, i, cur_min);
       }
     }
+    targetBar = -1;
   }
 
   function mixButtonClick() {
