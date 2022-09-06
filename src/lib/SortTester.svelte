@@ -24,6 +24,7 @@
         await insertionSort();
         break;
       default:
+        await selectionSort();
         break;
     }
 
@@ -63,6 +64,7 @@
     }
     targetBar = -1;
   }
+  async function selectionSort() {}
 
   function mixButtonClick() {
     const newArray = targetArray;
