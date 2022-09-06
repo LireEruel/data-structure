@@ -6,6 +6,9 @@
   <a href="#/bubble">
     <button>bubble</button>
   </a>
+  <a href="#/insertion">
+    <button>insertion</button>
+  </a>
 </main>
 
 <style>
