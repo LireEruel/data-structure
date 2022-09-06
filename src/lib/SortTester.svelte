@@ -71,7 +71,7 @@
     targetArray = newArray;
   }
   function sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
+    return new Promise((resolve) => setTimeout(resolve, 510 - ms));
   }
   function swap(arr, xp, yp) {
     var temp = arr[xp];
@@ -81,12 +81,14 @@
 </script>
 
 <label>
-  <p>speed</p>
-  <input type="number" bind:value={speedFactor} min="1" max="500" />
+  speed
   <input type="range" bind:value={speedFactor} min="1" max="500" />
 </label>
-<button on:click={sortButtonClick}>sort</button>
-<button on:click={mixButtonClick}>mix</button>
+<div class="button-wrap">
+  <button on:click={sortButtonClick}>sort</button>
+  <button on:click={mixButtonClick}>mix</button>
+</div>
+
 <div id="bars_container">
   {#each targetArray as bar, index}
     {#if targetBar === index}
@@ -105,5 +107,8 @@
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+  }
+  .button-wrap {
+    padding: 20px 0px;
   }
 </style>
