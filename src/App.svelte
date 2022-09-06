@@ -5,18 +5,20 @@
   import Queue from "./screens/Queue.svelte";
   import Bubble from "./screens/Bubble.svelte";
   import Insertion from "./screens/Insertion.svelte";
+  import Selection from "./screens/Selection.svelte";
   const routes = {
     "/": Home,
     "/stack": Stack,
     "/queue": Queue,
     "/bubble": Bubble,
     "/insertion": Insertion,
+    "/selection": Selection,
   };
 </script>
 
 <main>
   <nav>
-    <a href="/">home</a>
+    <a href="#/">home</a>
   </nav>
   <div>
     <Router {routes} />

@@ -9,6 +9,9 @@
   <a href="#/insertion">
     <button>Insertion</button>
   </a>
+  <a href="#/selection">
+    <button>Selection</button>
+  </a>
 </main>
 
 <style>
