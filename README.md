@@ -13,7 +13,7 @@ Queue가 뭔지 Stack이 뭔지.. FIFO LIFO 외우기에 급급했죠..
 
 ## 사용해보기
 
-[data-structure visualizer](lireeruel.github.io/data-structure/)
+[data-structure visualizer](https://lireeruel.github.io/data-structure/)
 
 ## 포함되어 있는 자료구조
 
