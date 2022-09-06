@@ -99,6 +99,7 @@
   }
 
   function mixButtonClick() {
+    if (isSorting) return; // 지금 정렬중이면 다시 섞는거 못하게 방지
     const newArray = targetArray;
     newArray.sort(() => Math.random() - 0.5);
     targetArray = newArray;
