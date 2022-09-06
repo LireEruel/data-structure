@@ -64,7 +64,6 @@
     targetBar = -1;
   }
 
-  async function renderBars() {}
   function mixButtonClick() {
     const newArray = targetArray;
     newArray.sort(() => Math.random() - 0.5);
