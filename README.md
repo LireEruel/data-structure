@@ -1,6 +1,7 @@
 # 자료구조 시각화 프로젝트
 
 ## 프로젝트 계획 이유
+
 처음 자료구조를 공부할 때에는 많이 어려웠습니다.
 
 Queue가 뭔지 Stack이 뭔지.. FIFO LIFO 외우기에 급급했죠..
@@ -11,6 +12,7 @@ Queue가 뭔지 Stack이 뭔지.. FIFO LIFO 외우기에 급급했죠..
 자료구조를 처음 접하는 학생들에게 감을 잡는데 도움이 되고 저 또한 직접 구현하며 복습하기 위해 프로젝트를 시작하였습니다.
 
 ## 사용해보기
+
 [data-structure visualizer](lireeruel.github.io/data-structure/)
 
 ## 포함되어 있는 자료구조
@@ -20,7 +22,8 @@ Queue가 뭔지 Stack이 뭔지.. FIFO LIFO 외우기에 급급했죠..
 <ul>
   <li>Queue</li>
   <li>Stack</li>
-  <li>bubble sort</li>
+  <li>Bubble Sort</li>
+  <li>Insertion Sort</li>
 </ul>
 
 ### 09.06 현재 디자인은 고려하지 않고 기능 구현을 우선적으로 하고있습니다. 디자인이 안타까워도 양해 부탁드립니다 ^^
