@@ -18,5 +18,5 @@
       >
     </p>
   </div>
-  <SortTester algorithm="insertion" />
+  <SortTester algorithm="selection" />
 </main>

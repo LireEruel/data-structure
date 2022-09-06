@@ -23,8 +23,9 @@
       case "insertion":
         await insertionSort();
         break;
-      default:
+      case "selection":
         await selectionSort();
+      default:
         break;
     }
 
@@ -33,7 +34,7 @@
   }
 
   async function bubbleSort() {
-    var i, j;
+    let i, j;
     isSorting = true;
     for (i = 0; i < numOfBars; i++) {
       for (j = 0; j < numOfBars - i - 1; j++) {
@@ -49,7 +50,7 @@
   }
 
   async function insertionSort() {
-    var i, j, key;
+    let i, j, key;
     for (i = 1; i < numOfBars; i++) {
       j = i - 1;
       key = targetArray[i];
@@ -64,7 +65,22 @@
     }
     targetBar = -1;
   }
-  async function selectionSort() {}
+  async function selectionSort() {
+    let i, j, cur_min;
+    for (i = 0; i < numOfBars - 1; i++) {
+      cur_min = i;
+      for (j = i + 1; j < numOfBars; j++) {
+        if (targetArray[j] < targetArray[cur_min]) {
+          cur_min = j;
+        }
+      }
+      // 현재 요소가 가장 정렬되지 않은 요소중 가장 작은 요소가 아닐 경우
+      if (cur_min !== i) {
+        //현재 가장 작은 요소를 정렬되지 않은 요소들 중 가장 왼쪽에 배치
+        swap(targetArray, i, cur_min);
+      }
+    }
+  }
 
   function mixButtonClick() {
     const newArray = targetArray;
@@ -75,7 +91,7 @@
     return new Promise((resolve) => setTimeout(resolve, 510 - ms));
   }
   function swap(arr, xp, yp) {
-    var temp = arr[xp];
+    let temp = arr[xp];
     arr[xp] = arr[yp];
     arr[yp] = temp;
   }
