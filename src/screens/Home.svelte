@@ -4,7 +4,10 @@
   <a href="#/queue"><button>Queue</button></a>
   <h2>Sort</h2>
   <a href="#/bubble">
-    <button>bubble</button>
+    <button>Bubble</button>
+  </a>
+  <a href="#/insertion">
+    <button>Insertion</button>
   </a>
 </main>
 
