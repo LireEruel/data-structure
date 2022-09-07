@@ -6,6 +6,7 @@
   import Bubble from "./screens/Bubble.svelte";
   import Insertion from "./screens/Insertion.svelte";
   import Selection from "./screens/Selection.svelte";
+  import Merge from "./screens/Merge.svelte";
   const routes = {
     "/": Home,
     "/stack": Stack,
@@ -13,6 +14,7 @@
     "/bubble": Bubble,
     "/insertion": Insertion,
     "/selection": Selection,
+    "/merge": Merge,
   };
 </script>
 
