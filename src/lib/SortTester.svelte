@@ -25,6 +25,8 @@
         break;
       case "selection":
         await selectionSort();
+      case "merge":
+        await mergeSort(0, numOfBars - 1);
       default:
         break;
     }
@@ -97,7 +99,49 @@
     }
     targetBar = -1;
   }
+  /**
+   * @param {number} left
+   * @param {number} right
+   */
+  async function mergeSort(left, right) {
+    if (left >= right) return;
+    // @ts-ignore
+    let mid = left + parseInt((right - left) / 2);
+    // @ts-ignore
+    mergeSort(targetArray, left, mid);
+    // @ts-ignore
+    mergeSort(targetArray, mid + 1, right);
+    // @ts-ignore
+    merge(targetArray, left, mid, right);
+  }
 
+  function merge(left, mid, right) {
+    let leftSide = left,
+      rightSide = mid + 1;
+    const sorted = [];
+    while (sorted.length < right - left) {
+      if (targetArray[leftSide] < targetArray[rightSide]) {
+        sorted.push(targetArray[leftSide]);
+        if (leftSide == mid) {
+          for (let i = rightSide; i <= right; i++) {
+            sorted.push(targetArray[i]);
+          }
+        }
+        leftSide++;
+      } else {
+        sorted.push(targetArray[rightSide]);
+        if (rightSide == right) {
+          for (let i = leftSide; i <= mid; i++) {
+            sorted.push(targetArray[i]);
+          }
+        }
+        rightSide++;
+      }
+    }
+    for (let i = left; i <= right; i++) {
+      targetArray[i] = sorted.splice(0, 1)[0];
+    }
+  }
   function mixButtonClick() {
     if (isSorting) return; // 지금 정렬중이면 다시 섞는거 못하게 방지
     const newArray = targetArray;
