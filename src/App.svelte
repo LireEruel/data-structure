@@ -7,6 +7,7 @@
   import Insertion from "./screens/Insertion.svelte";
   import Selection from "./screens/Selection.svelte";
   import Merge from "./screens/Merge.svelte";
+  import Quick from "./screens/Quick.svelte";
   const routes = {
     "/": Home,
     "/stack": Stack,
@@ -15,6 +16,7 @@
     "/insertion": Insertion,
     "/selection": Selection,
     "/merge": Merge,
+    "/quick": Quick,
   };
 </script>
 

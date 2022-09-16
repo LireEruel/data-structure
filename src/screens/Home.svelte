@@ -15,6 +15,9 @@
   <a href="#/merge">
     <button>Merge</button>
   </a>
+  <a href="#/quick">
+    <button>Quick</button>
+  </a>
 </main>
 
 <style>
