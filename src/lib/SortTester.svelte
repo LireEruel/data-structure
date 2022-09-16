@@ -7,7 +7,7 @@
   let speedFactor = 10;
   let targetBar = -1;
   let isSorting = false;
-
+  let pivotBar = -1;
   export let algorithm;
 
   for (let i = 0; i < numOfBars; i++) {
@@ -27,6 +27,8 @@
         await selectionSort();
       case "merge":
         await mergeSort(0, numOfBars - 1);
+      case "quick":
+        await quickSort(0, numOfBars - 1);
       default:
         break;
     }
@@ -46,7 +48,7 @@
         //왼쪽이 오른쪽보다 크면
         if (targetArray[j] > targetArray[j + 1]) {
           //교체
-          swap(targetArray, j, j + 1);
+          swap(j, j + 1);
           targetArray = targetArray;
           await sleep(speedFactor);
         }
@@ -94,7 +96,7 @@
       // 현재 요소가 가장 정렬되지 않은 요소중 가장 작은 요소가 아닐 경우
       if (cur_min !== i) {
         //현재 가장 작은 요소를 정렬되지 않은 요소들 중 가장 왼쪽에 배치
-        swap(targetArray, i, cur_min);
+        swap(i, cur_min);
       }
     }
     targetBar = -1;
@@ -117,44 +119,49 @@
     targetBar = -1;
   }
 
-  async function merge(left, mid, right) {
-    let leftSide = left,
-      rightSide = mid + 1;
-    const sorted = [];
-    while (sorted.length < right - left) {
-      if (targetArray[leftSide] < targetArray[rightSide]) {
-        targetBar = leftSide;
-        targetArray = targetArray;
-        sleep(speedFactor);
-        sorted.push(targetArray[leftSide]);
-        if (leftSide == mid) {
-          for (let i = rightSide; i <= right; i++) {
-            sorted.push(targetArray[i]);
-          }
-        }
-        leftSide++;
-      } else {
-        targetBar = leftSide;
-        targetArray = targetArray;
-        sleep(speedFactor);
-        sorted.push(targetArray[rightSide]);
-        if (rightSide == right) {
-          for (let i = leftSide; i <= mid; i++) {
-            sorted.push(targetArray[i]);
-          }
-          break;
-        }
-        rightSide++;
-      }
+  async function quickSort(left, right) {
+    if (left >= right) {
+      return;
     }
-    for (let i = left; i <= right; i++) {
-      targetArray[i] = sorted.splice(0, 1)[0];
-      targetBar = i;
-      targetArray = targetArray;
-    }
-    await sleep(speedFactor);
+    let pivot = await partition(left, right);
+    pivotBar = pivot;
+    await quickSort(left, pivot - 1);
+    await quickSort(pivot + 1, right);
     targetArray = targetArray;
+    targetBar = -1;
+    pivotBar = -1;
   }
+
+  async function partition(left, right) {
+    let pivot = targetArray[left];
+    pivotBar = pivot;
+    let l = left;
+    let r = right;
+
+    while (l < r) {
+      targetBar = l;
+      await sleep(speedFactor);
+      while (l < r && targetArray[l] < pivot) {
+        l++;
+        targetBar = l;
+        await sleep(speedFactor);
+      }
+      targetBar = r;
+      await sleep(speedFactor);
+      while (targetArray[r] > pivot) {
+        r--;
+        targetBar = r;
+        await sleep(speedFactor);
+      }
+      swap(l, r);
+      await sleep(speedFactor);
+    }
+    targetBar = l;
+    await sleep(speedFactor);
+    //swap(l, left)
+    return l;
+  }
+
   function mixButtonClick() {
     if (isSorting) return; // 지금 정렬중이면 다시 섞는거 못하게 방지
     const newArray = targetArray;
@@ -164,10 +171,10 @@
   function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, 510 - ms));
   }
-  function swap(arr, xp, yp) {
-    let temp = arr[xp];
-    arr[xp] = arr[yp];
-    arr[yp] = temp;
+  function swap(xp, yp) {
+    let temp = targetArray[xp];
+    targetArray[xp] = targetArray[yp];
+    targetArray[yp] = temp;
   }
 </script>
 
@@ -184,6 +191,8 @@
   {#each targetArray as bar, index}
     {#if targetBar === index}
       <Bar height={bar * heightFactor} color={"orange"} />
+    {:else if pivotBar === index}
+      <Bar height={bar * heightFactor} color={"green"} />
     {:else}
       <Bar height={bar * heightFactor} color={"grey"} />
     {/if}
