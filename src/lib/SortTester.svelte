@@ -108,12 +108,13 @@
     // @ts-ignore
     let mid = left + parseInt((right - left) / 2);
     // @ts-ignore
-    mergeSort(left, mid);
+    await mergeSort(left, mid);
     // @ts-ignore
-    mergeSort(mid + 1, right);
+    await mergeSort(mid + 1, right);
     // @ts-ignore
     await merge(left, mid, right);
     targetArray = targetArray;
+    targetBar = -1;
   }
 
   async function merge(left, mid, right) {
@@ -150,8 +151,8 @@
       targetArray[i] = sorted.splice(0, 1)[0];
       targetBar = i;
       targetArray = targetArray;
-      //await sleep(speedFactor);
     }
+    await sleep(speedFactor);
     targetArray = targetArray;
   }
   function mixButtonClick() {
