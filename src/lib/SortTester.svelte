@@ -139,7 +139,6 @@
     let r = right;
 
     while (l < r) {
-      console.log(pivot, targetArray[l], targetArray[r]);
       targetBar = l;
       await sleep(speedFactor);
       while (l < r && targetArray[l] < pivot) {
@@ -154,7 +153,6 @@
         targetBar = r;
         await sleep(speedFactor);
       }
-
       swap(l, r);
       await sleep(speedFactor);
     }
