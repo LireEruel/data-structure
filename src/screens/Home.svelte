@@ -12,6 +12,9 @@
   <a href="#/selection">
     <button>Selection</button>
   </a>
+  <a href="#/merge">
+    <button>Merge</button>
+  </a>
 </main>
 
 <style>
