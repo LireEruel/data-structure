@@ -29,6 +29,8 @@
         await mergeSort(0, numOfBars - 1);
       case "quick":
         await quickSort(0, numOfBars - 1);
+      case "heap":
+        await heapSort();
       default:
         break;
     }
@@ -160,6 +162,41 @@
     await sleep(speedFactor);
     //swap(l, left)
     return l;
+  }
+
+  async function heapSort() {
+    //make max heap
+    var N = targetArray.length - 1;
+    // @ts-ignore
+    for (let i = parseInt(targetArray.length / 2) - 1; i >= 0; i--) {
+      targetBar = i;
+      await heapify(i, N);
+    }
+
+    while (N > 0) {
+      swap(0, N);
+      N--;
+      await heapify(0, N);
+    }
+  }
+  async function heapify(i, N) {
+    let left = i * 2 + 1;
+    let right = i * 2 + 2;
+    let largest = i;
+    targetBar = i;
+    if (left <= N && targetArray[left] > targetArray[largest]) {
+      largest = left;
+    }
+    if (right <= N && targetArray[right] > targetArray[largest]) {
+      largest = right;
+    }
+
+    targetArray = targetArray;
+    await sleep(speedFactor);
+    if (largest != i) {
+      swap(i, largest);
+      await heapify(largest, N);
+    }
   }
 
   function mixButtonClick() {
