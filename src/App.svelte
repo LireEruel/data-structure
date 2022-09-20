@@ -8,6 +8,7 @@
   import Selection from "./screens/Selection.svelte";
   import Merge from "./screens/Merge.svelte";
   import Quick from "./screens/Quick.svelte";
+  import Heap from "./screens/Heap.svelte";
   const routes = {
     "/": Home,
     "/stack": Stack,
@@ -17,6 +18,7 @@
     "/selection": Selection,
     "/merge": Merge,
     "/quick": Quick,
+    "/heap": Heap,
   };
 </script>
 
