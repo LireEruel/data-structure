@@ -22,7 +22,7 @@
   };
 </script>
 
-<main>
+<main class="main">
   <nav>
     <a href="#/">home</a>
   </nav>
