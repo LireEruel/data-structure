@@ -1,5 +1,5 @@
 <main>
-  <h2>data structure</h2>
+  <!-- <h2>data structure</h2>
   <a href="#/stack"><button>Stack</button></a>
   <a href="#/queue"><button>Queue</button></a>
   <h2>Sort</h2>
@@ -20,17 +20,14 @@
   </a>
   <a href="#/heap">
     <button>Heap</button>
-  </a>
+  </a> -->
+  <section>Data Structure</section>
+  <section>Sorting Algorithm</section>
 </main>
 
 <style>
-  main {
-    width: 1080px;
-    padding-top: 10%;
-    margin: auto;
-  }
-  button {
-    padding: 2%;
-    font-size: 30px;
+  section {
+    width: 50%;
+    float: left;
   }
 </style>

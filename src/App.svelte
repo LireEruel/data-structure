@@ -37,7 +37,7 @@
   nav {
     margin: auto;
     float: left;
-    width: 150px;
+    width: 10%;
     height: 100%;
     background-color: var(--black);
   }
@@ -55,9 +55,9 @@
     color: var(--yellow);
   }
   .main-area {
-    width: 100%;
-    height: 100%;
-    margin: auto;
     background-color: var(--dark-grey);
+    width: 90%;
+    height: 100%;
+    float: left;
   }
 </style>
