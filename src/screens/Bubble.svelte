@@ -2,10 +2,10 @@
   import SortTester from "../lib/SortTester.svelte";
 </script>
 
-<main>
-  <h1>Bubble</h1>
+<main class="main-content">
+  <h1 class="green">Bubble</h1>
 
-  <div>
+  <div class="info-wrap border-green">
     <h3>
       Bubble Sort는 인접한 요소의 순서가 잘못된 경우 반복적으로 교체하여
       작동하는 가장 간단한 정렬 알고리즘입니다.

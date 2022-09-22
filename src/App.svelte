@@ -22,32 +22,42 @@
   };
 </script>
 
-<main>
+<main class="main">
   <nav>
-    <a href="#/">home</a>
+    <div class="home-btn">
+      <a href="#/">home</a>
+    </div>
   </nav>
-  <div>
+  <div class="main-area">
     <Router {routes} />
   </div>
 </main>
 
 <style>
   nav {
-    width: 1080px;
     margin: auto;
+    float: left;
+    width: 10%;
+    height: 100%;
+    background-color: var(--black);
+  }
+  .home-btn {
+    background-color: var(--grey);
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 13%;
+    padding-bottom: 13%;
   }
   a {
     font-weight: 500;
-    color: #646cff;
     text-decoration: inherit;
     font-size: 2em;
-    margin-right: 10%;
+    color: var(--yellow);
   }
-  a:hover {
-    color: #535bf2;
-  }
-  div {
-    width: 1080px;
-    margin: auto;
+  .main-area {
+    background-color: var(--dark-grey);
+    width: 90%;
+    height: 100%;
+    float: left;
   }
 </style>
