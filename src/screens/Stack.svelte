@@ -63,7 +63,8 @@
   }
   .stack-wrap {
     height: 60vh;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
   .button-wrap {
     margin: 10px 0px;
