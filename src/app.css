@@ -3,6 +3,10 @@ main {
     --grey : #414141;
     --dark-grey : #2b2b2b;
     --yellow : #FFE400;
+    --green : #14a76C;
+    --orange : #FF652F;
+    --yellow-tint : rgba(255, 228, 0, 0.1);
+    --green-tint : rgba(20, 167, 108, 0.1);
     font-family: "noto-serif";
 }
 .main {
