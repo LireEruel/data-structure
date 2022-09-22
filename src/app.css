@@ -7,7 +7,7 @@ main {
     --orange : #FF652F;
     --yellow-tint : rgba(255, 228, 0, 0.1);
     --green-tint : rgba(20, 167, 108, 0.1);
-    font-family: "noto-serif";
+    font-family: "noto-serif", "noto-sans"
 }
 .main {
     background-color: var(--black);
@@ -22,7 +22,13 @@ body {
     margin: 0px;
     padding : 0px
 }
-
+p,h1, h2,h3, a {
+    color: whitesmoke;
+}
+h1 {
+    font-size: 3em;
+    margin-top: 5%;
+  }
 @font-face {
     font-family: "noto-serif";
     src: url("./assets/font/NotoSerif-Regular.ttf");
@@ -30,4 +36,8 @@ body {
 @font-face {
     font-family: "SF_Pixelate";
     src: url("./assets/font/SF-Pixelate.ttf");
+}
+@font-face {
+    font-family: "noto-sans";
+    src: url("./assets/font/NotoSansKR-Regular.otf");
 }

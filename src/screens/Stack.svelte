@@ -48,6 +48,8 @@
   }
   h1 {
     font-size: 3em;
+    margin-top: 5%;
+    color: var(--yellow);
   }
   button {
     padding: 10px;
