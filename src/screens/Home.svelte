@@ -21,13 +21,27 @@
   <a href="#/heap">
     <button>Heap</button>
   </a> -->
-  <section>Data Structure</section>
-  <section>Sorting Algorithm</section>
+  <section class="data-structure-section">
+    <div>
+      <h1 class="title">Data Structure</h1>
+    </div>
+  </section>
+  <section>
+    <div>
+      <h1 class="title">Sorting Algorithm</h1>
+    </div>
+  </section>
 </main>
 
 <style>
   section {
     width: 50%;
     float: left;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .title {
+    font-family: "SF_Pixelate";
   }
 </style>

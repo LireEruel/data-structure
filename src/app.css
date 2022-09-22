@@ -21,5 +21,9 @@ body {
 
 @font-face {
     font-family: "noto-serif";
-    src: url("./assets/NotoSerif-Regular.ttf");
+    src: url("./assets/font/NotoSerif-Regular.ttf");
+}
+@font-face {
+    font-family: "SF_Pixelate";
+    src: url("./assets/font/SF-Pixelate.ttf");
 }
