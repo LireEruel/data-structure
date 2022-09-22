@@ -85,10 +85,12 @@
   }
   .button-wrap {
     margin-top: 10%;
-    width: 70%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
-    display: flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     border: 5px dashed;
   }
   button {
