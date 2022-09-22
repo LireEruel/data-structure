@@ -18,6 +18,9 @@
   <a href="#/quick">
     <button>Quick</button>
   </a>
+  <a href="#/heap">
+    <button>Heap</button>
+  </a>
 </main>
 
 <style>

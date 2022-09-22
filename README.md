@@ -27,6 +27,7 @@ Queue가 뭔지 Stack이 뭔지.. FIFO LIFO 외우기에 급급했죠..
   <li>Selection Sort</li>
   <li>Merge Sort</li>
   <li>Quick Sort</li>
+  <li>Heap Sort</li>
 </ul>
 
 ### 09.06 현재 디자인은 고려하지 않고 기능 구현을 우선적으로 하고있습니다. 디자인이 안타까워도 양해 부탁드립니다 ^^
