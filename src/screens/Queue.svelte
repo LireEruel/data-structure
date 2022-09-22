@@ -44,19 +44,23 @@
 </script>
 
 <main>
-  <h1>Queue</h1>
-  <p>큐는 선입선출(FIFO)의 특성을 가지는 자료구조입니다.</p>
-  <p>입력 연산을 Enqueue, 출력 연산을 Dequeue이라고 부릅니다.</p>
+  <h1 class="yellow">Queue</h1>
+  <div class="info-wrap yellow">
+    <p>큐는 선입선출(FIFO)의 특성을 가지는 자료구조입니다.</p>
+    <p>입력 연산을 Enqueue, 출력 연산을 Dequeue이라고 부릅니다.</p>
+  </div>
   <p>
     <a href="https://www.geeksforgeeks.org/stack-data-structure/">참고자료</a>
   </p>
+  <div class="button-wrap">
+    <button on:click={EnqueueButtonClick}>Enqueue</button>
+    <button on:click={DequeueButtonClick}>Dequeue</button>
+    <button on:click={clearButtonClick}>Clear</button>
+  </div>
 
-  <button on:click={EnqueueButtonClick}>Enqueue</button>
-  <button on:click={DequeueButtonClick}>Dequeue</button>
-  <button on:click={clearButtonClick}>Clear</button>
-  <div class="info-wrap">
-    <div class="front">Front/Head</div>
-    <div class="back">Back/Tail/Rear</div>
+  <div>
+    <div class="front yellow">Front/Head</div>
+    <div class="back yellow">Back/Tail/Rear</div>
   </div>
   <div class="queue-wrap">
     {#each queue as thing, index}
@@ -79,6 +83,9 @@
   h1 {
     font-size: 3em;
   }
+  h3 {
+    margin: 2% 0px;
+  }
   button {
     padding: 10px;
   }
@@ -88,11 +95,15 @@
   .back {
     float: right;
   }
+  .button-wrap {
+    margin: 10px 0px;
+  }
   .queue-wrap {
     display: flex;
   }
   .log {
     height: 300px;
     overflow: auto;
+    background-color: var(--grey);
   }
 </style>

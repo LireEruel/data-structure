@@ -100,6 +100,7 @@
     background: transparent;
     border: 3px solid;
     cursor: pointer;
+    font-size: 1.2em;
   }
   .right-button:hover {
     background-color: var(--green-tint);
