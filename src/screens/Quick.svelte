@@ -2,10 +2,10 @@
   import SortTester from "../lib/SortTester.svelte";
 </script>
 
-<main>
-  <h1>Quick</h1>
+<main class="main-content">
+  <h1 class="green">Quick</h1>
 
-  <div>
+  <div class="info-wrap border-green">
     <h3>
       Quick Sort는 분할 및 정복 알고리즘입니다. 첫번째 요소를 피벗으로 선택하고
       피벗을 중심으로 배열을 분할합니다. 왼쪽은 피벗보다 작은수 오른쪽은

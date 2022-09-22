@@ -2,10 +2,10 @@
   import SortTester from "../lib/SortTester.svelte";
 </script>
 
-<main>
-  <h1>Heap</h1>
+<main class="main-content">
+  <h1 class="green">Heap</h1>
 
-  <div>
+  <div class="info-wrap border-green">
     <h3>
       Heap Sort는 이진 힙 데이터 구조를 기반으로 하는 비교 기반 정렬 기술입니다.
       먼저 배열을 Max Heap으로 만들고 가장 큰 값을 뒤로 넘기면서 Heap을

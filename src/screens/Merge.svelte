@@ -2,10 +2,10 @@
   import SortTester from "../lib/SortTester.svelte";
 </script>
 
-<main>
-  <h1>Merge</h1>
+<main class="main-content">
+  <h1 class="green">Merge</h1>
 
-  <div>
+  <div class="info-wrap border-green">
     <h3>
       Merge Sort는 배열을 분할할 수 있을 때까지 계속 반으로 분할을 합니다. 그 후
       다시 병합하며 정렬하는 알고리즘입니다.

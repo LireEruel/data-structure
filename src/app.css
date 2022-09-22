@@ -26,6 +26,12 @@ body {
 p,h1, h2,h3, a {
     color: whitesmoke;
 }
+p {
+    line-height: 1.5;
+}
+label {
+    color: var(--green);
+}
 h1 {
     font-size: 3em;
     margin-top: 5%;
@@ -38,11 +44,21 @@ h1 {
 .border-yellow {
     border-color: var(--yellow);
 }
+.border-green {
+    border-color: var(--green);
+}
 .yellow {
     color :  var(--yellow);
     border-color:  var(--yellow);
 }
-
+.green {
+    color :  var(--green);
+    border-color:  var(--green);
+}
+.main-content {
+    width: 1080px;
+    margin: auto;
+}
 @font-face {
     font-family: "noto-serif";
     src: url("./assets/font/NotoSerif-Regular.ttf");

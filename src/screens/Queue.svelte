@@ -43,7 +43,7 @@
   }
 </script>
 
-<main>
+<main class="main-content">
   <h1 class="yellow">Queue</h1>
   <div class="info-wrap yellow">
     <p>큐는 선입선출(FIFO)의 특성을 가지는 자료구조입니다.</p>

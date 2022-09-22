@@ -55,7 +55,6 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    cursor: pointer;
   }
   .home-section-content {
     width: 100%;
