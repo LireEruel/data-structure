@@ -1,10 +1,14 @@
 <script>
-  import { onMount } from "svelte";
+  import { writable } from "svelte/store";
   import Bar from "../components/Bar.svelte";
+  const speedFactor = writable(localStorage.getItem("speedFactor") || 0);
+  speedFactor.subscribe((speed) =>
+    localStorage.setItem("speedFactor", speed.toString())
+  );
   let numOfBars = 100;
   let targetArray = new Array(numOfBars);
   let heightFactor = 5;
-  let speedFactor = 10;
+
   let targetBar = -1;
   let isSorting = false;
   let pivotBar = -1;
@@ -13,6 +17,7 @@
   for (let i = 0; i < numOfBars; i++) {
     targetArray[i] = i + 1;
   }
+  mixButtonClick();
   async function sortButtonClick() {
     if (isSorting) return; // sorting함수가 2개가 동시에 동작하지 않도록 수정
     isSorting = true;
@@ -260,7 +265,7 @@
 
 <label>
   speed
-  <input type="range" bind:value={speedFactor} min="1" max="500" />
+  <input type="range" bind:value={$speedFactor} min="1" max="500" />
 </label>
 <div class="button-wrap">
   <button on:click={sortButtonClick}>sort</button>
