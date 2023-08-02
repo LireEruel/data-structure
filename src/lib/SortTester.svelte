@@ -1,10 +1,7 @@
 <script>
   import { writable } from "svelte/store";
   import Bar from "../components/Bar.svelte";
-  const speedFactor = writable(localStorage.getItem("speedFactor") || 0);
-  speedFactor.subscribe((speed) =>
-    localStorage.setItem("speedFactor", speed.toString())
-  );
+  let speedFactor = 200;
   let numOfBars = 100;
   let targetArray = new Array(numOfBars);
   let heightFactor = 5;
@@ -265,7 +262,7 @@
 
 <label>
   speed
-  <input type="range" bind:value={$speedFactor} min="1" max="500" />
+  <input type="range" bind:value={speedFactor} min="10" max="500" />
 </label>
 <div class="button-wrap">
   <button on:click={sortButtonClick}>sort</button>

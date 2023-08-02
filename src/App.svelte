@@ -25,8 +25,11 @@
 <main class="main">
   <nav>
     <div class="home-btn">
-      <a href="#/">home</a>
+      <a href="#/" class="home-link">home</a>
     </div>
+    <a href="https://github.com/LireEruel/data-structure" target="_blank">
+      <i class="fab fa-github github-icon" />
+    </a>
   </nav>
   <div class="main-area">
     <Router {routes} />
@@ -48,7 +51,7 @@
     padding-top: 13%;
     padding-bottom: 13%;
   }
-  a {
+  .home-link {
     font-weight: 500;
     text-decoration: inherit;
     font-size: 2em;
@@ -59,5 +62,11 @@
     width: 90%;
     height: 100%;
     float: left;
+  }
+  .github-icon {
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 10%;
   }
 </style>
